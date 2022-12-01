@@ -20,14 +20,14 @@ function fetchIssues() {
 
         issuesList.innerHTML += 
         '<div class="well">' +
-        '<h6>Issue ID:' + id + '</h6>' +
-        postedDate.toDateString() +
+        '<h2>'+ subject +'</h2>'+
+        '<h4>' + postedDate.toDateString() + '</h4>' +
         '<p><span class= "label ' + statusColor + ' ">' + status + '</span></p>' +
-        '<h3>' + subject + '</h3>' +
         '<p>' + description + '</p>' + 
-        '<p><span class="glyphicon glyphicon-time"></span> ' + severity + ' ' + '<span class="glyphicon glyphicon-user"></span>' + assignedTo + '</p>' +
+         '<p><span class="glyphicon glyphicon-time"></span> ' + severity + ' ' + '<span class="glyphicon glyphicon-user"></span>' + assignedTo + '</p>' +
         '<a href="#" class="btn btn-warning" onclick="setStatusClosed(\''+id+'\')">Close</a> ' +
-        '<a href="#" class="btn btn-danger" onclick="deleteIssue(\''+id+'\')">Delete</a> '
+        '<a href="#" class="btn btn-danger" onclick="deleteIssue(\''+id+'\')">Delete</a> '+
+        '<h6>Issue ID:' + id + '</h6>' 
         + '</div>'
     }
 }
